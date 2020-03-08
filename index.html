@@ -3,13 +3,15 @@
     --blue:#BAD7F0;
     --pastelblue:#CFE2F3;
     --purple:#9576B8;
-    --pastelpurp:#DCD3F4;
+    --pastelpurp:#DCCCF4;
     --pink:#EFB1B1;
     --pastelpink:#F7DDE6;
+    --pastelgreen:#C6EFD1;
     background:#fafafa;
     margin:0px auto;
     overflow-x:hidden;
     overflow-y:auto;
+    cursor:crosshair;
   }
   #cmd-head {
     width:100vw;
@@ -111,7 +113,6 @@
 
 #wrapper {
   width:100vw;
-  background:#fafafa;
   z-index:10;
 }
 
@@ -120,12 +121,192 @@
   height:100vh;
   position:relative;
 }
+.solidbg {
+  background:rgba(250,250,250,0.80);
+}
+.cmd-cleft {
+  width:40vw;
+  height:100%;
+  position:absolute;
+  top:0px; left:10vw;
+  display:flex;
+  align-items:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.cmd-c h1 {
+  font-family:'Josefin Sans',Arial;
+  font-size:5vw;
+  color:#333;
+  margin:10px 0px;
+  width:100%;
+}
+.cmd-c h3 {
+  font-size:3vw;
+  font-family:'Josefin Sans',Arial;
+  color:#333;
+  margin:10px 0px;
+  width:100%;
+}
+.cmd-c p {
+  font-family:'Muli',Arial;
+  font-weight:500;
+  font-size:18px;
+  color:#333;
+  line-height:26px;
+  text-align:justify;
+}
+.cmd-cright {
+  width:40vw;
+  height:100%;
+  position:absolute;
+  top:0px; left:55vw;
+  display:flex;
+  align-items:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.cmd-imggrid {
+  max-width:35vw;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  align-content:stretch;
+  justify-items:space-around;
+  justify-content:center;
+}
+.cmd-imggrid img {
+  max-width:35vw;
+  margin:5px;
+  flex-grow:1;
+  overflow:hidden;
+  border-radius:5px;
+}
+
+.cmd-avatar {
+  position:relative;
+  max-width:35vw;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  align-content:center;
+  justify-items:center;
+  justify-content:center;
+}
+.cmd-avatar img {
+  margin:20px;
+  border:10px solid #fafafa;
+  border-radius:100%;
+  max-width:200px;
+}
+.cmd-avatar img:hover {
+  transform:scale(1.05);
+  transition:all 0.5s ease-in-out;
+}
+
+.pshad {
+  text-shadow:3px 3px 0px var(--pastelgreen);
+}
+ 
+footer {
+  font-family:'Josefin Sans',Arial;
+  padding:5px 10px;
+  color:#666;
+  background:#fafafa;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  #cmd-title {
+    position:absolute;
+    bottom:8vh; left:6vw;
+    font-family:'Josefin Sans',Arial;
+    font-size:9vw;
+    font-weight:700;
+    line-height:100%;
+    color:#333;
+  }
+  #cmd-desc {
+    width:70vw;
+    position:absolute;
+    top:15vh;
+    right:12vw;
+    font-family:'Josefin Sans',Arial;
+    font-weight:900;
+    text-transform:uppercase;
+    font-size:12px;
+    text-align:right;
+    letter-spacing:2px;
+    color:#333;
+    line-height:20px;
+  }
+  .box {
+  position: fixed;
+  top: -1350px;
+  transform: rotate(80deg); 
+  right: -20vw;
+  z-index:-10;
+}
+  .cmd-cleft {
+    width:100vw;
+    height:auto;
+    padding:3vh 0px;
+    position:relative;
+    margin:0px auto;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .cmd-c p{
+    width:75vw;
+  }
+  .cmd-c {
+    height:auto;
+    padding:5vh 0px;
+  }
+  .cmd-cright {
+    width:100vw;
+    height:auto;
+    padding:0vh 5vw;
+    position:relative;
+    margin:0px auto;
+    left:0px;
+  }
   
+  .cmd-imggrid {
+    position:relative;
+    max-width:90vw;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:stretch;
+    align-content:stretch;
+    justify-items:space-around;
+    justify-content:center;
+  }
+  .cmd-imggrid img {
+    max-width:55vw;
+    margin:5px;
+    overflow:hidden;
+    border-radius:5px;
+    flex-grow:1;
+  }
+  .cmd-avatar {
+    position:relative;
+    margin:0px auto;
+    max-width:100vw;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    align-content:center;
+    justify-items:center;
+    justify-content:center;
+  }
+}
 </style>
 
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,900|Josefin+Sans:300,400,600,700|Quicksand:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,900|Josefin+Sans:300,400,600,700|Muli:300,400,500,600|Quicksand:300,400,500,600" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 <link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
@@ -140,7 +321,7 @@
       </div>
       <div id="cmd-head-in">
         <div id="cmd-title">
-          EXPLORE<br>FINANCE
+          EXPLORE<br>FINANCE<span style="color:var(--pink)">.</span>
         </div>
         <div id="cmd-desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -154,10 +335,62 @@
     </div>
     
     <div id="wrapper">
+    
+      <div class="cmd-c solidbg">
+        <div class="cmd-cleft">
+          <h1>Finance is important<span style="color:var(--pink)">.</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <h3>Play the game</h3>
+        </div>
+        <div class="cmd-cright">
+          <div class="cmd-imggrid">
+            <img src="https://imagenes.universia.net/gc/net/images/cultura/c/co/com/como-ahorrar.jpg">
+            <img style="width:100px" src="https://www.affairesautomobiles.ca/wp-content/uploads/2017/05/bigstock-149855021.jpg">
+            <img style="width:200px" src="https://www.conseiller.ca/wp-content/uploads/sites/4/2000/06/voler-argent-800x600.jpg">
+          </div>
+        </div>
+      </div>
+      
+      <div class="cmd-c">
+        <div class="cmd-cleft">
+          <h1>Choose an avatar<span style="color:var(--blue)">.</span></h1>
+        </div>
+        <div class="cmd-cright">
+          <div class="cmd-avatar">
+            <img src="https://66.media.tumblr.com/e88ee11b1794cc423b15f26feef5e35b/tumblr_ofmeotFjZM1voqnhpo3_250.png">
+            <img src="https://66.media.tumblr.com/1cc441d17735a020dc9316b123872f8d/tumblr_plso1dqnI61sa59ki_500.jpg">
+          </div>
+        </div>
+      </div>
+      
+      <div class="cmd-c solidbg">
+        <div class="cmd-cleft">
+          <iframe width="100%" height="315" style="margin-left:-5%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          </iframe>
+        </div>
+        <div class="cmd-cright">
+          <h1>How you can <span class="pshad">SAVE</span>.</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      
       <div class="cmd-c">
         
       </div>
+  
     </div>
     
   </body>
+  <footer>
+    image credits:
+    https://noticias.universia.net.mx/cultura/noticia/2015/12/24/1134927/tiempo-comenzar-ahorrar.html
+    https://www.conseiller.ca/blogues_/histoires-de-fisc-funda-dilaver/reforme-fiscale-federale-quelles-consequences-au-quebec/attachment/voler-argent-800x600/
+    https://affairesautomobiles.ca/2017/05/etes-vous-au-fait-de-toutes-les-taxes-et-droits-qui-sappliquent-a-lautomobile/
+    https://thelostsister.tumblr.com/post/184344557046/more-animal-crossing-icons-creditrb-if
+    
+  </footer>
 </html>
