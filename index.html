@@ -1,0 +1,163 @@
+<style>
+  body {
+    --blue:#BAD7F0;
+    --pastelblue:#CFE2F3;
+    --purple:#9576B8;
+    --pastelpurp:#DCD3F4;
+    --pink:#EFB1B1;
+    --pastelpink:#F7DDE6;
+    background:#fafafa;
+    margin:0px auto;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+  #cmd-head {
+    width:100vw;
+    height:102vh;
+    position:relative;
+  }
+  #cmd-head-in {
+    width:100%;
+    height:100vh;
+    position:absolute;
+    top:0px; left:0px;
+  }
+  #cmd-menu {
+    position:absolute;
+    top:92vh; left:5vw;
+    padding-left:10px;
+    z-index:10;
+  }
+  #cmd-menu a {
+    margin-right:5vw;
+    text-decoration:none;
+    color:#333;
+    text-transform:uppercase;
+    font-family:'Quicksand',Arial;
+    font-weight:600;
+    font-size:1.25em;
+    letter-spacing:3px;
+  }
+  #cmd-menu .chome:hover {
+    background:var(--pastelblue);
+  }
+  #cmd-menu .cabout:hover {
+    background:var(--pastelpurp);
+  }
+  #cmd-menu .ccontact:hover {
+    background:var(--pastelpink);
+  }
+  #cmd-title {
+    position:absolute;
+    bottom:8vh; left:5vw;
+    font-family:'Josefin Sans',Arial;
+    font-size:9vw;
+    font-weight:700;
+    line-height:100%;
+    color:#333;
+  }
+  #cmd-desc {
+    width:30vw;
+    position:absolute;
+    bottom:55vh;
+    right:12vw;
+    font-family:'Josefin Sans',Arial;
+    font-weight:900;
+    text-transform:uppercase;
+    font-size:15px;
+    text-align:justify;
+    letter-spacing:2px;
+    color:#333;
+    line-height:20px;
+  }
+  
+  .box {
+  position: fixed;
+  top: -1100px;
+  transform: rotate(80deg); 
+  right: -20vw;
+  z-index:-10;
+}
+
+.wave {
+  position: absolute;
+  opacity: .4;
+  width: 2000px;
+  height: 1800px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+.wave.-one {
+  animation: rotate 12s infinite linear;
+  opacity: .2;
+  background: #EFB1B1;
+}
+
+.wave.-two {
+  animation: rotate 5s infinite linear;
+  opacity: .15;
+  background: #9576B8;
+}
+
+.wave.-three {
+  animation: rotate 8s infinite linear;
+  background-color: #BAD7F0;
+}
+
+#wrapper {
+  width:100vw;
+  background:#fafafa;
+  z-index:10;
+}
+
+.cmd-c {
+  width:100%;
+  height:100vh;
+  position:relative;
+}
+  
+</style>
+
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,900|Josefin+Sans:300,400,600,700|Quicksand:300,400,600" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/9s289mbhxpdhb3l/starry.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="cmd-head">
+      <div class='box'>
+          <div class='wave -two'></div>
+          <div class='wave -one'></div>
+          <div class='wave -three'></div>
+      </div>
+      <div id="cmd-head-in">
+        <div id="cmd-title">
+          EXPLORE<br>FINANCE
+        </div>
+        <div id="cmd-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        </div>
+      </div>
+      <div id="cmd-menu">
+        <a href="" class="chome">HOME</a>
+        <a href="" class="cabout">ABOUT</a>
+        <a href="" class="ccontact">CONTACT</a>
+      </div>
+    </div>
+    
+    <div id="wrapper">
+      <div class="cmd-c">
+        
+      </div>
+    </div>
+    
+  </body>
+</html>
