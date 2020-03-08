@@ -6,12 +6,12 @@
     --pastelpurp:#DCCCF4;
     --pink:#EFB1B1;
     --pastelpink:#F7DDE6;
+    --green:#B0DEBC;
     --pastelgreen:#C6EFD1;
     background:#fafafa;
     margin:0px auto;
     overflow-x:hidden;
     overflow-y:auto;
-    cursor:crosshair;
   }
   #cmd-head {
     width:100vw;
@@ -122,7 +122,7 @@
   position:relative;
 }
 .solidbg {
-  background:rgba(250,250,250,0.80);
+  background:rgba(250,250,250,0.75);
 }
 .cmd-cleft {
   width:40vw;
@@ -167,6 +167,7 @@
   flex-wrap:wrap;
 }
 .cmd-imggrid {
+  margin:0px auto;
   max-width:35vw;
   display:flex;
   flex-wrap:wrap;
@@ -207,10 +208,49 @@
 .pshad {
   text-shadow:3px 3px 0px var(--pastelgreen);
 }
+.cmdbreak {
+  width:100px;
+  height:8px;
+  border:none;
+  background:var(--purple);
+  margin-left:0px;
+}
+.cmd-c button {
+  padding:24px 20px 20px 20px;
+  margin:10px 0px;
+  width:100%;
+  border:none;
+  border-radius:100px;
+  text-align:center;
+  background:var(--pink);
+  font-family:'Josefin Sans',Arial;
+  font-weight:700;
+  color:#fafafa;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:25px;
+  line-height:100%;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+}
+.cmd-c button:nth-child(2) {
+  background:var(--blue);
+}
+.cmd-c button:nth-child(3) {
+  background:var(--green);
+}
+.cmd-c button:hover {
+  background:var(--purple);
+}
+
+.cmd-vid {
+  margin-left:-5%;
+  width:100%;
+  height:350px;
+}
  
 footer {
   font-family:'Josefin Sans',Arial;
-  padding:5px 10px;
+  padding:10px;
   color:#666;
   background:#fafafa;
 }
@@ -251,23 +291,34 @@ footer {
   .cmd-cleft {
     width:100vw;
     height:auto;
+    left:0;
     padding:3vh 0px;
     position:relative;
     margin:0px auto;
     display:flex;
     flex-wrap:wrap;
   }
+  .cmd-c h1 {
+    text-align:center;
+    left:0;
+  }
   .cmd-c p{
-    width:75vw;
+    width:80%;
+    padding:15px 10%;
+    margin:0px auto;
+  }
+  .cmd-c hr {
+    margin:10px auto;
   }
   .cmd-c {
     height:auto;
+    display:block;
+    text-align:center;
     padding:5vh 0px;
   }
   .cmd-cright {
     width:100vw;
     height:auto;
-    padding:0vh 5vw;
     position:relative;
     margin:0px auto;
     left:0px;
@@ -292,14 +343,27 @@ footer {
   }
   .cmd-avatar {
     position:relative;
+    left:-30px;
     margin:0px auto;
-    max-width:100vw;
+    max-width:90vw;
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     align-content:center;
     justify-items:center;
     justify-content:center;
+  }
+  .cmd-vid {
+    width:80%;
+    margin:0px auto;
+    height:300px;
+  }
+  
+  .cmd-c button {
+    width:80%;
+    margin:5px auto;
+    box-shadow:none;
+    font-size:20px;
   }
 }
 </style>
@@ -342,7 +406,7 @@ footer {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <h3>Play the game</h3>
+          <h3>Let's get started !</h3>
         </div>
         <div class="cmd-cright">
           <div class="cmd-imggrid">
@@ -353,6 +417,7 @@ footer {
         </div>
       </div>
       
+      <!--
       <div class="cmd-c">
         <div class="cmd-cleft">
           <h1>Choose an avatar<span style="color:var(--blue)">.</span></h1>
@@ -364,10 +429,27 @@ footer {
           </div>
         </div>
       </div>
+      -->
+      
+      
+      <div class="cmd-c">
+        <div class="cmd-cleft">
+          <h1>What can you do to save?</h1>
+          <hr class="cmdbreak">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="cmd-cright">
+          <button>Open a bank account</button>
+          <button>Save money</button>
+          <button>Invest</button>
+        </div>
+      </div>
       
       <div class="cmd-c solidbg">
         <div class="cmd-cleft">
-          <iframe width="100%" height="315" style="margin-left:-5%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          <iframe class="cmd-vid" src="https://www.youtube.com/embed/tgbNymZ7vqY">
           </iframe>
         </div>
         <div class="cmd-cright">
@@ -376,10 +458,6 @@ footer {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-      </div>
-      
-      <div class="cmd-c">
-        
       </div>
   
     </div>
